@@ -8,23 +8,20 @@ export const getPosts = async () => {
       postsConnection {
         edges {
           node {
-            author {
-              bio
-              id
-              posts {
-                categories {
-                  name
-                  slug
-                }
-              }
-              name
-            }
             createdAt
             slug
             title
             excerpt
             featuredImage {
               url
+            }
+            author {
+              bio
+              id
+              name
+              photo {
+                url
+              }
             }
           }
         }
