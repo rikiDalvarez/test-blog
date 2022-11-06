@@ -24,14 +24,15 @@ export default function Home({ posts }) {
             <PostCard post={post.node} key={post.title}></PostCard>
           ))}
         </div>
-      </div>
-
-      <div className="lg:col-span-4 col-span-1">
-        <div className="lg:sticky relative top-8">
-          {/* <PostWidget></PostWidget>
-          <Categories></Categories> */}
+        <div className="lg:col-span-4 col-span-1 mt-8">
+          <div className="lg:sticky relative top-8">
+            <PostWidget></PostWidget>
+            <Categories></Categories>
+          </div>
         </div>
       </div>
+
+
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
         <a
