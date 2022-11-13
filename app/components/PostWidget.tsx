@@ -18,10 +18,14 @@ function PostWidget({ categories, slug }) {
 		}
 	}, [slug])
 
-	console.log(relatedPosts)
+	console.log({ relatedPosts })
+
 
 	return (
-		<div>PostWidget</div>
+		<div>
+
+			{relatedPosts.map((post => (<div> {post.title}</div>)))}
+		</div>
 	)
 }
 

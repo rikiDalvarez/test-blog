@@ -4,7 +4,6 @@ import Link from "next/link"
 import moment from 'moment';
 
 function PostCard({ post }: any) {
-	console.log(post)
 	return (
 		<div className=" bg-orange-100 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 mt-10 shadow-green-800 ring-green-200	 ring ring-offset-2">
 			<div className="relative overflow-hidden shadow-md pb-80 mb-6">
