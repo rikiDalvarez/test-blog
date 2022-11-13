@@ -55,6 +55,43 @@ export const getRecentPosts = async () => {
   return result.posts;
 };
 
+export const getSameCategory = async () => {
+  const query = gql`
+    query getCategories {
+      postsConnection {
+        edges {
+          node {
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+            author {
+              bio
+              id
+              name
+              photo {
+                url
+              }
+            }
+            categories {
+              id
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.posts;
+};
+
 export const getSimilarPosts = async () => {
   const query = gql`
     query GetPostsDetails($slug: String!, $categories: [String!]) {
