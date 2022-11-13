@@ -12,7 +12,7 @@ const posts = [
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-10 mb-8 bg-gray-300">
+    <div className="container mx-auto px-10 mb-8 bg-green-100/50 rounded-lg mix-blend-multiply">
       <Head>
         <title>Plantio Blog</title>
         <link rel="icon" href="/favicon.ico" />

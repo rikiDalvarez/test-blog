@@ -7,7 +7,7 @@ const categories = [{ name: "React", slug: "React" }, { name: "Web development",
 function Header() {
 	return (
 		<div className="continer mx-auto px-10 mb-8 text-lime-700">
-			<div className=" border-b w-full inline-block border-blue-400 py-8">
+			<div className=" border-b w-full inline-block border-orange-600 py-8">
 				<div className="md:floar-left block">
 					<Link href="/">
 						<h1 className="cursor-pointer font-bold text-4xl text-Black">
