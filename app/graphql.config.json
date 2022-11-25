@@ -1,0 +1,11 @@
+{
+	"name": "test-blog",
+	"documents": "src/**/**/*.{graphql, js, ts, jsx, tsx}",
+	"extensions": {
+		"endpoints": {
+			"Default GraphQL Endpoint": {
+				"url": "https://api-sa-east-1.hygraph.com/v2/cl9ph6vyo1l7e01t2hc0qflkp/master"
+			}
+		}
+	}
+}

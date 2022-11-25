@@ -1,26 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { getSameCategory, getRecentPosts } from '../services'
+import { getCategories, getRecentPosts } from '../services'
+import Link from 'next/link'
 
-function Categories({ categories, slug }) {
-	const [sameCategoryPost, setCategories] = useState([]);
+function Categories() {
+	const [sameCategories, setCategories] = useState([]);
 
 	useEffect(() => {
-		if (slug) {
-			getSameCategory(categories, slug)
-				.then((result) => setCategories(result))
-		} else {
-			getRecentPosts()
-				.then((result) => setCategories(result))
-		}
-	}, [slug])
+		getCategories()
+			.then((newCategories) => setCategories(newCategories))
+	}, [])
 
-	console.log({ sameCategoryPost })
-
-
-
+	console.log({ sameCategories })
 	return (
-		<div>{sameCategoryPost.map((post => (
-			<div> {post.title}</div>)))}</div>
+		<div>{sameCategories.map((categories => (
+			<div key={categories.name}> {categories.name} </div>)))}</div>
 	)
 }
 
