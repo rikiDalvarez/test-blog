@@ -5,7 +5,7 @@ import moment from 'moment';
 
 function PostCard({ post }: any) {
 	return (
-		<div className=" bg-orange-100 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 mt-10 shadow-green-800 ring-green-200	 ring ring-offset-2">
+		<div className=" bg-orange-200 shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 mt-10 shadow-green-800 ring-green-900	 ring ring-offset-2">
 			<div className="relative overflow-hidden shadow-md pb-80 mb-6">
 				<img src={post.featuredImage.url} alt={post.title} className="object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" />
 			</div>
