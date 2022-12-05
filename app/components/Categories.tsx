@@ -3,7 +3,7 @@ import { getCategories, getRecentPosts } from '../services'
 import Link from 'next/link'
 
 function Categories() {
-	const [sameCategories, setCategories] = useState([]);
+	const [allCategories, setCategories] = useState([]);
 
 	useEffect(() => {
 		getCategories()
@@ -15,7 +15,7 @@ function Categories() {
 			<h3 className="text-xl mb-8 font-semibold border-b pb-4 border-orange-600">
 				Categories
 			</h3>
-			{sameCategories.map((category) => (
+			{allCategories.map((category) => (
 				<Link key={category.slug} href={`/category/${category.slug}`}>
 					<span className="cursor-pointer block pb-3 mb-3">
 						{category.name}
