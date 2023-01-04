@@ -19,7 +19,7 @@ function Header() {
 				<div className="md:floar-left block">
 					<Link href="/">
 						<h1 className="cursor-pointer font-bold text-4xl text-Black">
-							Plantios
+							Plantio
 						</h1>
 					</Link>
 				</div>
